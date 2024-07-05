@@ -1,9 +1,11 @@
 import styles from './ProjectsStyles.module.css';
-import viberr from '../../assets/viberr.png';
+import banner from '../../assets/banner.jpg.jpg';
+import logo from '../../assets/logo.png.jpg';
 import freshBurger from '../../assets/fresh-burger.png';
 import hipsster from '../../assets/hipsster.png';
 import fitLift from '../../assets/fitlift.png';
 import ProjectCard from '../../common/ProjectCard';
+
 
 function Projects() {
   return (
@@ -11,10 +13,10 @@ function Projects() {
       <h1 className="sectionTitle">Projects</h1>
       <div className={styles.projectsContainer}>
         <ProjectCard
-          src={viberr}
-          link="https://github.com/Ade-mir/company-landing-page-2"
-          h3="Viberr"
-          p="Streaming App"
+          src={banner}
+          link="https://github.com/AnasCoding1986/dialogue-dock-client"
+          h3="DialogueDock"
+          p="Share your thought"
         />
         <ProjectCard
           src={freshBurger}
