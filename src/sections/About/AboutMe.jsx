@@ -1,5 +1,5 @@
 import styles from './AboutMeStyles.module.css';
-import about from '../../assets/about.png'
+import logo from '../../assets/svgLogo.png'
 
 const AboutMe = () => {
     return (
@@ -8,7 +8,7 @@ const AboutMe = () => {
             <div className={styles.aboutDetails}>
                 <div id='aboutImgDiv' className={styles.aboutDetailsItemOne}>
 
-                    <img className={styles.aboutImg} src={about} alt="" />
+                    <img className={styles.aboutImg} src={logo} alt="" />
 
                 </div>
                 <div className={styles.aboutDetailsItemTwo}>

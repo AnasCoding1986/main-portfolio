@@ -1,7 +1,9 @@
 import Swal from 'sweetalert2';
 import styles from './ContactStyles.module.css';
+import { useRef } from 'react';
 
 function Contact() {
+  const formRef = useRef(null);
 
   const onSubmit = async (event) => {
     event.preventDefault();
@@ -30,13 +32,14 @@ function Contact() {
         showConfirmButton: false,
         timer: 1500
       });
+      formRef.current.reset(); // Reset the form
     }
   };
 
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
-      <form onSubmit={onSubmit} action="">
+      <form ref={formRef} onSubmit={onSubmit} action="">
         <div className="formGroup">
           <label htmlFor="name" hidden>
             Name
@@ -69,7 +72,8 @@ function Contact() {
             name="message"
             id="message"
             placeholder="Message"
-            required></textarea>
+            required
+          ></textarea>
         </div>
         <input className="hover btn" type="submit" value="Submit" />
       </form>
