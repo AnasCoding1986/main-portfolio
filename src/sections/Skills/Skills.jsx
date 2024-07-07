@@ -12,29 +12,31 @@ function Skills() {
     <section id="skills" className={styles.container}>
       <h1 className="sectionTitle">Skills</h1>
       <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="HTML" />
-        <SkillList src={checkMarkIcon} skill="CSS" />
-        <SkillList src={checkMarkIcon} skill="JavaScript" />
+      <SkillList src={checkMarkIcon} skill="JavaScript" />
+        <SkillList src={checkMarkIcon} skill="React" />
         <SkillList src={checkMarkIcon} skill="MongoDB" />
         <SkillList src={checkMarkIcon} skill="Express.js" />
         <SkillList src={checkMarkIcon} skill="Node.js" />
-        
+        <SkillList src={checkMarkIcon} skill="Firebase" />
+
       </div>
       <hr />
       <div className={styles.skillList}>
-        <SkillList src={checkMarkIcon} skill="React" />
+        <SkillList src={checkMarkIcon} skill="HTML" />
+        <SkillList src={checkMarkIcon} skill="CSS" />
         <SkillList src={checkMarkIcon} skill="Tailwind CSS" />
         <SkillList src={checkMarkIcon} skill="Bootstrap" />
-        <SkillList src={checkMarkIcon} skill="Sass" />
-        <SkillList src={checkMarkIcon} skill="Figma" />
+
+        
+       
       </div>
       <hr />
       <div className={styles.skillList}>
         <SkillList src={checkMarkIcon} skill="Git" />
-        <SkillList src={checkMarkIcon} skill="Firebase" />
         <SkillList src={checkMarkIcon} skill="Photoshop" />
-        <SkillList src={checkMarkIcon} skill="Node" />
-        
+        <SkillList src={checkMarkIcon} skill="Sass" />
+        <SkillList src={checkMarkIcon} skill="Figma" />
+     
       </div>
     </section>
   );
