@@ -1,10 +1,42 @@
+import Swal from 'sweetalert2';
 import styles from './ContactStyles.module.css';
 
 function Contact() {
+
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "f894b1ae-732a-43a3-ae41-528fde177d24");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      console.log("Success", res);
+      Swal.fire({
+        position: "top-end",
+        icon: "success",
+        title: "Message successfully sent",
+        showConfirmButton: false,
+        timer: 1500
+      });
+    }
+  };
+
   return (
     <section id="contact" className={styles.container}>
       <h1 className="sectionTitle">Contact</h1>
-      <form action="">
+      <form onSubmit={onSubmit} action="">
         <div className="formGroup">
           <label htmlFor="name" hidden>
             Name
