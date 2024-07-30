@@ -1,5 +1,5 @@
 import styles from './HeroStyles.module.css';
-import heroImg from '../../assets/round.jpg';
+import heroImg1 from '../../assets/p4.png';
 import sun from '../../assets/sun.svg';
 import moon from '../../assets/moon.svg';
 // import twitterLight from '../../assets/twitter-light.svg';
@@ -23,7 +23,7 @@ function Hero() {
     <section id="hero" className={styles.container}>
       <div className={styles.colorModeContainer}>
         <img
-          src={heroImg}
+          src={heroImg1}
           className={styles.hero}
           alt="Profile picture of Harris Johnsen"
         />
